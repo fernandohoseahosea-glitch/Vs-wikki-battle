@@ -4,7 +4,7 @@ const characters = [
   {
     id: "89818",
     title: "Kagura Shiraishi",
-    image: "img/Kagura.jpg",
+    image: "Kagura.jpg",
     caption: "Kagura Shiraishi",
     tiers: ["High 1-A"],
     keys: [

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VS Battles Wiki - Mobile Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Bar Atas Mirip Fandom -->
+  <div class="fandom-top">
+    <div class="fandom-brand">FANDOM</div>
+    <div class="fandom-search-wrap">
+      <input
+        type="search"
+        id="searchInput"
+        class="fandom-search"
+        placeholder="Cari karakter atau verse..."
+        autocomplete="off"
+      />
+      <div id="searchResults" class="search-dropdown hidden"></div>
+    </div>
+  </div>
+
+  <!-- Header Biru VS BATTLES WIKI -->
+  <header class="vsb-header">
+    <button id="toggleListBtn" class="vsb-menu-btn" title="Daftar Karakter">☰</button>
+    <div class="vsb-header-titles">
+      <div id="headerCharTitle" class="vsb-sub-title">The Presence</div>
+      <div class="vsb-main-title">VS BATTLES WIKI</div>
+    </div>
+    <button id="bookmarkBtn" class="vsb-save-btn" title="Tandai Karakter">🔖</button>
+  </header>
+
+  <!-- Panel Daftar Karakter Cepat (Bisa Dibuka/Tutup) -->
+  <section id="charListPanel" class="char-list-panel hidden">
+    <div class="list-panel-head">
+      <strong>Daftar Karakter Tersedia</strong>
+      <button id="closeListBtn" class="close-panel-btn">Tutup</button>
+    </div>
+    <div id="charListItems" class="char-list-items"></div>
+  </section>
+
+  <!-- Konten Utama Biru Muda Ala Mobile VSB Wiki -->
+  <main class="vsb-page">
+    <h1 id="pageTitle" class="char-main-heading">The Presence</h1>
+
+    <div id="saveStatusRow" class="save-row">
+      <button id="saveCharBtn" class="save-pill-btn">🔖 SIGN IN TO SAVE</button>
+    </div>
+<figure id="charFigure" class="vsb-figure hidden">
+  <img id="charImg" class="vsb-img" alt="" />
+  <figcaption id="charCaption" class="vsb-caption"></figcaption>
+</figure>
+
+    <!-- Blok Tier & Key (Format Garis Tegak | Seperti Gambar) -->
+    <div class="meta-block">
+      <div id="tierLine" class="meta-line"></div>
+      <div id="keyLine" class="meta-line"></div>
+    </div>
+
+    <!-- Identitas Singkat -->
+    <div class="info-block">
+      <p><strong>Name:</strong> <span id="infoName"></span></p>
+      <p><strong>Origin:</strong> <span id="infoOrigin" class="wiki-link-text"></span></p>
+      <p><strong>Gender:</strong> <span id="infoGender"></span></p>
+      <p><strong>Age:</strong> <span id="infoAge"></span></p>
+      <p><strong>Classification:</strong> <span id="infoClass"></span></p>
+    </div>
+
+    <!-- Powers and Abilities -->
+    <section class="powers-section">
+      <h2 class="powers-heading">Powers and Abilities:</h2>
+      <ul id="powersList" class="powers-list"></ul>
+    </section>
+
+    <!-- Tab Bawah Sederhana: Profil / VS Battle / Tier -->
+    <nav class="bottom-bar">
+      <button class="bottom-tab active" data-pane="profile">Profil</button>
+      <button class="bottom-tab" data-pane="battle">VS Battle</button>
+      <button class="bottom-tab" data-pane="tiers">Tiering</button>
+    </nav>
+
+    <!-- Pane Tambahan: VS Battle -->
+    <section id="pane-battle" class="extra-pane hidden">
+      <h3>Perbandingan Karakter</h3>
+      <div class="battle-row">
+        <select id="battleF1"></select>
+        <span class="vs-word">VS</span>
+        <select id="battleF2"></select>
+        <button id="runBattleBtn" class="wiki-action-btn">Cek</button>
+      </div>
+      <div id="battleOutput" class="battle-output hidden"></div>
+    </section>
+
+    <!-- Pane Tambahan: Tiering Ringkas -->
+    <section id="pane-tiers" class="extra-pane hidden">
+      <h3>Tiering System</h3>
+      <ul class="simple-tier-list">
+        <li><strong>Tier 0:</strong> Boundless — Melampaui seluruh hierarki dimensi dan batas eksistensi.</li>
+        <li><strong>High 1-A:</strong> High Outerverse — Melampaui struktur dimensi tak terbatas dan hierarki 1-A.</li>
+        <li><strong>1-A:</strong> Outerverse — Di luar konsep ruang, waktu, dan dimensi standar.</li>
+        <li><strong>2-A:</strong> Multiverse+ — Skala kontinum ruang-waktu semesta tak terbatas.</li>
+        <li><strong>5-B:</strong> Planet — Energi/skala setara satu planet.</li>
+        <li><strong>8-A:</strong> Multi-City Block — Skala beberapa blok kota.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
